@@ -6,8 +6,8 @@
               <select class="form-control" name="generate_symlink" id="generate_symlink" onchange="this.form.submit()">
                   <option value="">Select</option>
                   <option value="wordfence">Wordfence Symlinks</option>
-                  <option value="cache">wp-content/cache</option>
-                  <option value="">WP rocket</option>
+                  <option value="">Divi - (To be supported)</option>
+                  <option value="">WP rocket - (To be supported)</option>
               </select>
           </form>
         
