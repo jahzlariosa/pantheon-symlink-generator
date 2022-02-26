@@ -1,7 +1,7 @@
 <?php include('header.php');?>
 <?php 
 // WordFence Symlinks
-function createWflogSymlink() {
+function createWordfenceSymlink() {
     // Make sure to remove any incorrect symlinks
     system('rm -rf ../wp-content/wflogs');
     system('rm ../wordfence-waf.php');
@@ -20,6 +20,12 @@ function createCacheSymlink() {
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated wp-content/cache symlink</div>");
 }
 
+function createEtCacheSymlink() {
+    system('ln -s ../../files/et-cache ../wp-content/et-cache');
+    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated Divi et-cache Symlink</div>");
+}
+
+
     // If empty
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === '' ){
         header("Location: " . $_SERVER["HTTP_REFERER"]);
@@ -27,12 +33,17 @@ function createCacheSymlink() {
 
     // WordFence
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'wordfence' ){
-        createWflogSymlink();
+        createWordfenceSymlink();
     }
 
     // Cache
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'cache' ){
         createCacheSymlink();
+    }
+
+    // Cache
+    if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'etcache' ){
+        createEtCacheSymlink();
     }
 
 
