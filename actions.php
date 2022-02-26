@@ -72,7 +72,7 @@ Please read Pantheon documentation for more information if you experience any pe
 </div>
 <?php } ?>
 
-<div class="text-center">
+<div class="text-center mt-4">
     <button class="btn btn-secondary" onclick="history.go(-1);">Back </button>
 </div>
 <?php include('footer.php');?>
