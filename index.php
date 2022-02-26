@@ -7,8 +7,8 @@
                   <option value="">Select</option>
                   <option value="wordfence">Wordfence Symlinks</option>
                   <option value="etcache">Divi et-cache Symlink</option>
-                  <option value="cache">wp-content/cache Symlink</option>
-                  <option value="">WP rocket - (To be supported)</option>
+                  <option value="wprocket">WP Rocket</option>
+                  <option value="cache">Cache Symlink (Don't use this with WP Rocket)</option>
               </select>
           </form>
         
@@ -18,6 +18,9 @@
           <h4>Important Note</h4>
           Only use this on dev environment while on SFTP mode 
           and don't forget to commit and deploy the changes
+
+          <hr>
+          Note that this script only generate the symlinks and not the targets, Please do not forget to SFTP to the environment you are working on and make sure that the symlink target exists.
         </div>
 
 <?php include('footer.php');?>

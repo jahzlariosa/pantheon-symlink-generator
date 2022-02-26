@@ -25,6 +25,14 @@ function createEtCacheSymlink() {
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated Divi et-cache Symlink</div>");
 }
 
+function createWpRocketSymlink() {
+    system('rm -rf ../wp-content/cache');
+    system('mkdir ../wp-content/cache');
+    system('ln -s ../../../files/cache/wp-rocket ../wp-content/cache/wp-rocket');
+    system('ln -s ../../../files/cache/busting ../wp-content/cache/busting');
+    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WP Rocket Symlink</div>");
+}
+
 
     // If empty
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === '' ){
@@ -41,9 +49,14 @@ function createEtCacheSymlink() {
         createCacheSymlink();
     }
 
-    // Cache
+    // Et-Cache
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'etcache' ){
         createEtCacheSymlink();
+    }
+
+    // WP Rocket
+    if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'wprocket' ){
+        createWpRocketSymlink();
     }
 
 
@@ -82,6 +95,15 @@ Please read Pantheon documentation for more information if you experience any pe
 </div>
 </div>
 <?php } ?>
+
+<?php // WP Rocket
+if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'wprocket' ){ ?>
+    <div class="card col-lg-8 mx-auto p-2">
+    <h5 class="text-danger">Note</h5>
+        WP Rocket still requires some lines added to wp-config.php you can do it manually and push it back to dev and deploy to test and live.
+    </div>
+<?php } ?>
+
 
 <div class="text-center mt-4">
     <button class="btn btn-secondary" onclick="history.go(-1);">Back </button>
