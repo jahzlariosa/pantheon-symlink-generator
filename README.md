@@ -13,6 +13,12 @@ Converting this script into a plugin/module
 * Select the symlink you want to generate
 * Go back to the pantheon site dashboard and commit the changes
 
+# Supported Plugins and Themes that requires Symlinks
+* WordFence
+* WP Rocket
+* WebP Express
+* Divi
+
 # Donate or Support
 If this project helps you please consider to donate or **support the developer**
 
