@@ -10,6 +10,7 @@ This is not an official Pantheon Script, Use it at your own risk
 Converting this script into a plugin/module
 
 # How to use
+* Download PSG from [Releases](https://github.com/jahzlariosa/pantheon-symlink-generator/releases)
 * Upload the psg directory to your application root directory
 * Open up a browser and navigate to `dev-sitename.pantheonsite.io/pantheon-symlink-generator`
 * Select the symlink you want to generate
