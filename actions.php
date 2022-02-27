@@ -36,6 +36,7 @@ function createWpRocketSymlink() {
     system('rm -rf ../wp-content/cache');
     system('mkdir ../wp-content/cache');
     system('rm ../wp-content/advanced-cache.php');
+    system('rm -rf ../wp-content/wp-rocket-config');
 
     // WP Rocket Create Symlinks
     system('ln -s ../../../files/cache/wp-rocket ../wp-content/cache/wp-rocket');
