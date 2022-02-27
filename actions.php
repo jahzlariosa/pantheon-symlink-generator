@@ -22,6 +22,7 @@ function createWordfenceSymlink() {
 
 // Any plugin/theme that needs wp-content/cache symlink
 function createCacheSymlink() {
+    system('mkdir ../wp-content/cache');
     system('ln -s ../../files/cache ../wp-content/cache');
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated wp-content/cache symlink</div>");
 }
