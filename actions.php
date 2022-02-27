@@ -28,11 +28,32 @@ function createEtCacheSymlink() {
 function createWpRocketSymlink() {
     system('rm -rf ../wp-content/cache');
     system('mkdir ../wp-content/cache');
+    system('rm ../wp-content/advanced-cache.php');
+
+    // WP Rocket Create Symlinks
     system('ln -s ../../../files/cache/wp-rocket ../wp-content/cache/wp-rocket');
     system('ln -s ../../../files/cache/busting ../wp-content/cache/busting');
-    system('cp ./contents/advanced-cache.php ../wp-content/advanced-cache.php');
+    system('ln -s ../../files/wp-rocket/wp-rocket-config ../wp-content/wp-rocket-config');
+    system('ln -s ../../files/wp-rocket/advanced-cache.php ../wp-content/advanced-cache.php');
+
+
+    // WP Rocket Targets
+    system('mkdir ../../files/cache');
+    system('mkdir ../../files/wp-rocket');
+    system('mkdir ../../files/wp-rocket/wp-rocket-config');
     system('mkdir ../../files/cache/wp-rocket');
     system('mkdir ../../files/cache/busting');
+
+    // WP Rocket wp-config.php insert
+    $wp_rocket_config = "define( 'WP_CACHE', true );\n";    
+    $file = file('../wp-config.php');
+    $first_line = array_shift($file);
+    array_unshift($file, $wp_rocket_config);
+    array_unshift($file, $first_line);   
+    $fp = fopen('../wp-config.php', 'w');
+    fwrite($fp, implode("\n", $file));     
+    fclose($fp);
+
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WP Rocket Symlink</div>");
 }
 
