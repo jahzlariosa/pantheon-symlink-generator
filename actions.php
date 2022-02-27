@@ -30,6 +30,7 @@ function createWpRocketSymlink() {
     system('mkdir ../wp-content/cache');
     system('ln -s ../../../files/cache/wp-rocket ../wp-content/cache/wp-rocket');
     system('ln -s ../../../files/cache/busting ../wp-content/cache/busting');
+    system('cp ./contents/advanced-cache.php ../wp-cntent/advanced-cache.php');
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WP Rocket Symlink</div>");
 }
 
