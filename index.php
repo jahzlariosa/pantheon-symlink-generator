@@ -7,7 +7,8 @@
                   <option value="">Select</option>
                   <option value="wordfence">Wordfence Symlinks</option>
                   <option value="etcache">Divi et-cache Symlink</option>
-                  <option value="wprocket">WP Rocket</option>
+                  <option value="wprocket">WP Rocket Symlink</option>
+                  <option value="webpexpress">WebP Express Symlink</option>
                   <option value="cache">Cache Symlink (Don't use this with WP Rocket)</option>
               </select>
           </form>

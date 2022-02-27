@@ -33,6 +33,13 @@ function createWpRocketSymlink() {
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WP Rocket Symlink</div>");
 }
 
+function createWebpExpressSymlink() {
+    system('rm -rf ../wp-content/webp-expres');
+    system('ln -s ../../files/webp-express ../wp-content/webp-express');
+    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WebP Express Symlink</div>");
+}
+
+
 
     // If empty
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === '' ){
@@ -57,6 +64,11 @@ function createWpRocketSymlink() {
     // WP Rocket
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'wprocket' ){
         createWpRocketSymlink();
+    }
+
+    // WebP Express
+    if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'webpexpress' ){
+        createWebpExpressSymlink();
     }
 
 
