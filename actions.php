@@ -65,6 +65,7 @@ function createWpRocketSymlink() {
 
 function createWebpExpressSymlink() {
     system('rm -rf ../wp-content/webp-expres');
+    system('mkdir ../../files/webp-express');
     system('ln -s ../../files/webp-express ../wp-content/webp-express');
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WebP Express Symlink</div>");
 }
