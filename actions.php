@@ -12,6 +12,12 @@ function createWordfenceSymlink() {
     system('ln -s ../files/private/wordfence-waf.php ../wordfence-waf.php');
     system('ln -s ../files/private/.user.ini ../.user.ini');
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>WordFence Symlinks Generated</div>");
+
+    // Create Wordfence Symlink Targets
+    system('mkdir ../../files/private');
+    system('mkdir ../../files/private/wflogs');
+    system('cp ./contents/wordfence-waf.php ../../../files/private/');
+    system('cp ./contents/.user.ini ../../../files/private/');
 }
 
 // Any plugin/theme that needs wp-content/cache symlink
@@ -101,7 +107,7 @@ function createWebpExpressSymlink() {
 <?php // WordFence
 if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'wordfence' ){ ?>
 <div class="card col-lg-8 mx-auto p-2">
-<h5 class="text-danger">MUST DO</h5>
+<h5 class="text-danger">Must Do</h5>
 After generating the symlink create the file wordfence-waf.php with the following content and upload to files/private/ via SFTP
 <hr>
 <code><pre>
@@ -126,6 +132,9 @@ define("WFWAF_LOG_PATH", '../../code/wp-content/wflogs/');
 include_once '../../code/wp-content/plugins/wordfence/waf/bootstrap.php';
 }
 </pre></code>
+<hr>
+Or clone the Dev environment files over to your test and live environments.
+
 Please read Pantheon documentation for more information if you experience any perfomance issues.
 <a href="https://pantheon.io/docs/plugins-known-issues#wordfence" target="_blank">https://pantheon.io/docs/plugins-known-issues#wordfence</a>
 </div>
