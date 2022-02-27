@@ -11,7 +11,7 @@ Converting this script into a plugin/module
 
 # How to use
 * Upload the psg directory to your application root directory
-* Open up a browser and navigate to `yoursite.com/pantheon-symlink-generator`
+* Open up a browser and navigate to `dev-sitename.pantheonsite.io/pantheon-symlink-generator`
 * Select the symlink you want to generate
 * Go back to the pantheon site dashboard and commit the changes
 
