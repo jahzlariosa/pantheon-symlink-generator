@@ -4,10 +4,7 @@ Simple PHP script to help generate Symlinks for plugins/themes with known issues
 
 
 # Disclaimer
-This is not an official Pantheon Script, Use it at your own risk
-
-# Future Plans
-Converting this script into a plugin/module
+This is not an official Pantheon Script.
 
 # How to use
 * Download PSG from [Releases](https://github.com/jahzlariosa/pantheon-symlink-generator/releases)
