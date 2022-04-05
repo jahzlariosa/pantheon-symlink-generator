@@ -34,13 +34,11 @@ function createEtCacheSymlink() {
 
 function createWpRocketSymlink() {
     system('rm -rf ../wp-content/cache');
-    system('mkdir ../wp-content/cache');
     system('rm ../wp-content/advanced-cache.php');
     system('rm -rf ../wp-content/wp-rocket-config');
 
     // WP Rocket Create Symlinks
-    system('ln -s ../../../files/cache/wp-rocket ../wp-content/cache/wp-rocket');
-    system('ln -s ../../../files/cache/busting ../wp-content/cache/busting');
+    system('ln -s ../../../files/cache ../wp-content/cache');
     system('ln -s ../../files/wp-rocket/wp-rocket-config ../wp-content/wp-rocket-config');
     system('ln -s ../../files/wp-rocket/advanced-cache.php ../wp-content/advanced-cache.php');
 
