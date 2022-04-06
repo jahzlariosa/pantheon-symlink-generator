@@ -28,6 +28,7 @@ function createCacheSymlink() {
 }
 
 function createEtCacheSymlink() {
+    system('rm -rf ../wp-content/et-cache');
     system('ln -s ../../files/et-cache ../wp-content/et-cache');
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated Divi et-cache Symlink</div>");
 }
