@@ -16,16 +16,17 @@
         
       <hr/>
 
-        <div class="alert alert-secondary">
-          <h4>Important Note</h4>
-          Only use this in dev environment while in SFTP mode and do not forget to commit and deploy the changes.
+        <div class="alert alert-dark bg-dark text-white">
+          <h4 class="text-warning">Important Note</h4>
+          <div class="alert alert-info"><strong>Only use this in dev environment while in SFTP mode and do not forget to commit and deploy the changes.</strong>
           <hr>
           Please do not forget to SFTP to the environment you are working on and make sure that the symlink target exists.
           If you need to know more about Pantheon Symlinks please see https://pantheon.io/docs/symlinks-assumed-write-access
+          </div>
           <hr>
           <h5>Extra Steps for Supported Plugins</h5>
 
-          <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion accordion-flush text-dark" id="accordionFlushExample">
           <!--ITEM-->
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
