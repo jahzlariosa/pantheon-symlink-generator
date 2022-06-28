@@ -10,6 +10,7 @@
                   <option value="wprocket">WP Rocket Symlink</option>
                   <option value="webpexpress">WebP Express Symlink</option>
                   <option value="cache">Cache Symlink (Don't use this with WP Rocket)</option>
+                  <option value="languages">WPML Languages</option>
               </select>
           </form>
         
@@ -42,12 +43,12 @@
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <h2 class="accordion-header" id="flush-headingtwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
                 WordFence
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapsetwo" class="accordion-collapse collapse" aria-labelledby="flush-headingtwo" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
               <ul>
                 <li>Before creating the WordFence Symlinks please deactivate the plugin first.</li>

@@ -27,10 +27,11 @@ function createCacheSymlink() {
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated wp-content/cache symlink</div>");
 }
 
+// et-cache
 function createEtCacheSymlink() {
     system('rm -rf ../wp-content/et-cache');
     system('ln -s ../../files/et-cache ../wp-content/et-cache');
-    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated Divi et-cache Symlink</div>");
+    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated wp-content/et-cache Symlink</div>");
 }
 
 function createWpRocketSymlink() {
@@ -68,7 +69,14 @@ function createWebpExpressSymlink() {
     system('rm -rf ../wp-content/webp-expres');
     system('mkdir ../../files/webp-express');
     system('ln -s ../../files/webp-express ../wp-content/webp-express');
-    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WebP Express Symlink</div>");
+    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated wp-content/webp-express Symlink</div>");
+}
+
+// languages
+function createLanguagesSymlink() {
+    system('rm -rf ../wp-content/languages');
+    system('ln -s ../../files/languages ../wp-content/languages');
+    echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated wp-content/languages Symlink</div>");
 }
 
 
@@ -101,6 +109,11 @@ function createWebpExpressSymlink() {
     // WebP Express
     if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'webpexpress' ){
         createWebpExpressSymlink();
+    }
+
+    // Languages
+    if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'languages' ){
+        createLanguagesSymlink();
     }
 
 
@@ -147,7 +160,8 @@ Please read Pantheon documentation for more information if you experience any pe
 if (isset($_GET['generate_symlink']) && $_GET['generate_symlink'] === 'wprocket' ){ ?>
     <div class="card col-lg-8 mx-auto p-2">
     <h5 class="text-danger">Note</h5>
-        WP Rocket still requires some lines added to wp-config.php you can do it manually and push it back to dev and deploy to test and live.
+        <h6>We've edited wp-config.php and added as requried by WP-Rocket Plugin</h6>
+        <span class="bg-dark text-white p-2 mt-2">define( 'WP_CACHE', true );</span>
     </div>
 <?php } ?>
 
