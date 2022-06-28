@@ -1,7 +1,7 @@
 # Pantheon-symlink-generator
 Simple PHP script to help generate Symlinks for plugins/themes with known issues to the Pantheon Platform.
 
-![Preview](https://github.com/jahzlariosa/pantheon-symlink-generator/blob/main/preview.png?raw=true)
+![Preview](https://github.com/jahzlariosa/pantheon-symlink-generator/blob/main/screenshot.png?raw=true)
 
 # Disclaimer
 This is not an official Pantheon Script.
