@@ -18,7 +18,7 @@ This is not an official Pantheon Script.
 * WP Rocket
 * WebP Express
 * Divi
-* WP ML
+* WPML
 * Any plugin the requires (wp-content/cache symlink)
 
 # Donate or Support
