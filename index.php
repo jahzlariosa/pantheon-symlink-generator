@@ -1,9 +1,8 @@
 <?php include('header.php');?>
     <div class="col-lg-6 mx-auto mt-3">
-      <div class="text-center"></div>
-          <h3>Select which symlink you need to generate</h3>
+      <div class="text-center mb-5 mt-5"><h1>Select which symlink you need to generate</h1></div>
           <form action="actions.php?" method="GET">
-              <select class="form-control" name="generate_symlink" id="generate_symlink" onchange="this.form.submit()">
+              <select class="form-control input-lg" name="generate_symlink" id="generate_symlink" onchange="this.form.submit()">
                   <option value="">Select</option>
                   <option value="wordfence">Wordfence Symlinks</option>
                   <option value="etcache">Divi et-cache Symlink</option>
@@ -18,13 +17,13 @@
 
         <div class="alert alert-dark bg-dark text-white">
           <h4 class="text-warning">Important Note</h4>
-          <div class="alert alert-info"><strong>Only use this in dev environment while in SFTP mode and do not forget to commit and deploy the changes.</strong>
+          <div class="alert alert-info"><span class="fw-bold">Only use this in dev environment while in SFTP mode and do not forget to commit and deploy the changes.</span>
           <hr>
           Please do not forget to SFTP to the environment you are working on and make sure that the symlink target exists.
           If you need to know more about Pantheon Symlinks please see https://pantheon.io/docs/symlinks-assumed-write-access
           </div>
           <hr>
-          <h5>Extra Steps for Supported Plugins</h5>
+          <h5 class="text-danger">Extra Steps for Supported Plugins (READ FIRST!)</h5>
 
           <div class="accordion accordion-flush text-dark" id="accordionFlushExample">
           <!--ITEM-->
