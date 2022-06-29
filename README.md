@@ -22,7 +22,7 @@ This is not an official Pantheon Script.
 * Any plugin the requires (wp-content/cache symlink)
 
 # Donate or Support
-If this project helps you please consider to donate or **support the developer**
+Love this project?
 
 [![Support](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-green.svg?style=for-the-badge)](https://buymeacoff.ee/jahz) [![Send](https://img.shields.io/badge/send-btc-yellow.svg?style=for-the-badge)](https://jahz.bitcoinwallet.com/)
 
