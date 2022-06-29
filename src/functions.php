@@ -58,7 +58,7 @@ function createWpRocketSymlink() {
     array_unshift($file, $wp_rocket_config);
     array_unshift($file, $first_line);   
     $fp = fopen('../wp-config.php', 'w');
-    fwrite($fp, implode("\n", $file));     
+    fwrite($fp, implode($file));     
     fclose($fp);
 
     echo ("<div class='mt-5 mx-auto text-center col-lg-8 alert alert-success' role='alert'>Generated WP Rocket Symlink</div>");
