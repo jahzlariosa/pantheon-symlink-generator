@@ -21,9 +21,4 @@ This is not an official Pantheon Script.
 * WPML
 * Any plugin the requires (wp-content/cache symlink)
 
-# Donate or Support
-Love this project?
-
-[![Support](https://img.shields.io/badge/Support-Buy%20Me%20A%20Coffee-green.svg?style=for-the-badge)](https://buymeacoff.ee/jahz) 
-
 Crafted with :heart: and a lot of :coffee: by Joseph Lariosa | :philippines:
